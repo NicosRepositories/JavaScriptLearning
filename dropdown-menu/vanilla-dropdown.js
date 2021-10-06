@@ -9,23 +9,23 @@ let toggleStatus = function() {
     let getSidebarUl = document.querySelector(".sidebar ul");
     let getSidebarLinks = document.querySelectorAll(".sidebar a");
 
-    if (navStatus === false) {
+    if (navStatus === false) { /* if Sidebar is closed */
         getSidebarUl.style.visibility = "visible";
-        getSidebar.style.width = "272px";
+        getSidebar.style.width = "272px"; /* change width of sidebar so the content can fit */
 
         let arrayLength = getSidebarLinks.length;
-        for (let i = 0; i < arrayLength; i++) {
+        for (let i = 0; i < arrayLength; i++) { /* make every List item Visible */
             getSidebarLinks[i].style.opacity = "1";            
         }
 
         navStatus = true;
     }
-    else {
+    else { /* if Sidebar is open */
         getSidebarUl.style.visibility = "hidden";
-        getSidebar.style.width = "50px";
+        getSidebar.style.width = "50px"; /* change width of sidebar to the base Design */
 
         let arrayLength = getSidebarLinks.length;
-        for (let i = 0; i < arrayLength; i++) {
+        for (let i = 0; i < arrayLength; i++) { /* make every List item invisible */
             getSidebarLinks[i].style.opacity = "0";            
         }
 
