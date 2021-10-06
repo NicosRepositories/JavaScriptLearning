@@ -20,6 +20,7 @@ let toggleStatus = function() {
         }
 
         navStatus = true;
+        clickCheck();
     }
     else { // if Sidebar is open 
         getSidebarUl.style.visibility = "hidden";
@@ -55,6 +56,7 @@ let toggleMenu = function() {
         }
 
         dropdownStatus = true;
+        clickCheck();
         
     } else { // if dropdown is open 
         getDropdownContainer.style.background = "none";
@@ -81,5 +83,20 @@ let closeMenu = function() {
     }
 
 }
+
+/** Close any Menu if user Clicks somewhere else */
+
+let clickCheck = function() {
+    let clickNumber = 0;
+    
+        window.addEventListener("click", function() {
+             clickNumber = clickNumber + 1;
+             if (clickNumber > 1) {
+                console.log("closed");
+                closeMenu();
+                clickNumber = 0;
+             }                
+        });
+    }   
 
 
