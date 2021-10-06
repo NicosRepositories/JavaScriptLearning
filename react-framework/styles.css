@@ -1,5 +1,7 @@
 body {
-    background-color: #f1f1f1;
+    background-image: url(react.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 /* Top-Navigation */
@@ -107,7 +109,8 @@ body {
 .navigation ul .listItem {
     z-index: 1500;
     visibility: hidden;
-    background: lightgray;
+    background-color: lightgray;
+    opacity: 1;
 }
 
 .navigation ul .listItem:hover {

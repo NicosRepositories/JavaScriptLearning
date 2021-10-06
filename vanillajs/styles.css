@@ -1,5 +1,5 @@
 body {
-    background-image: url(vanilla.jpg);
+    background-image: url(javascript.png);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -109,7 +109,8 @@ body {
 .navigation ul .listItem {
     z-index: 1500;
     visibility: hidden;
-    background: lightgray;
+    background-color: lightgray;
+    opacity: 1;
 }
 
 .navigation ul .listItem:hover {
