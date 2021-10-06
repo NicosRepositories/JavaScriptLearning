@@ -97,3 +97,17 @@ body {
 .sidebar ul li a:hover{
     background-color: 222;
 }
+
+/** Dropdown Menu */
+
+
+
+.navigation ul .listItem {
+    z-index: 1500;
+    visibility: hidden;
+    background: lightgray;
+}
+
+.navigation ul .listItem:hover {
+    opacity: 0.5;
+}
