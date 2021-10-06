@@ -1,0 +1,115 @@
+body {
+    background-color: #f1f1f1;
+}
+
+/* Top-Navigation */
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+/* Menu Button to open Sidebar, with Hamburger Icon */
+.nav-button {
+    width: 60px;
+    height: 100%;
+    background-color: orange;
+    background-image: url(menu-icon.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    opacity: 0.5;
+}
+
+.navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navigation ul li {
+    list-style: none;
+    line-height: 60px;
+    min-width: 139px;
+    text-align: center;
+}
+
+.navigation ul li a{
+    display: block;
+    height: 100%;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/*sidebar-left*/
+.sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: calc(100vh - 60px);
+    padding: 0 5px;
+    background-color: #1b1b1b;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul {
+    padding-top: 15px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.sidebar ul li {
+    line-height: 60px;
+    list-style: none;
+}
+
+.sidebar ul li a{
+    display: block;
+    height: 60px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.sidebar ul li a:hover{
+    background-color: 222;
+}
+
+/** Dropdown Menu */
+
+
+
+.navigation ul .listItem {
+    z-index: 1500;
+    visibility: hidden;
+    background: lightgray;
+}
+
+.navigation ul .listItem:hover {
+    opacity: 0.5;
+}

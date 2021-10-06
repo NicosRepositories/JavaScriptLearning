@@ -41,10 +41,12 @@ let toggleStatus = function() {
 let dropdownStatus = false;
 
 let toggleMenu = function() {
+    let getDropdownContainer = document.querySelector(".dropdown");
     let getDropdownLinks = document.querySelectorAll(".listItem");
 
     if (dropdownStatus === false) { /** if dropdown is closed */
-        
+        getDropdownContainer.style.background = "lightgrey";
+
         let arrayLength = getDropdownLinks.length;
         for (let i = 0; i < arrayLength; i++) {
             getDropdownLinks[i].style.visibility = "visible"; /** make items Visible */
@@ -53,6 +55,8 @@ let toggleMenu = function() {
         dropdownStatus = true;
         
     } else { /** if dropdown is open */
+        getDropdownContainer.style.background = "none";
+
         let arrayLength = getDropdownLinks.length;
         for (let i = 0; i < arrayLength; i++) {
             getDropdownLinks[i].style.visibility = "hidden"; /** make items invisible */

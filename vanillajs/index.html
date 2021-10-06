@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>JS Dropdown</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="vanilla-dropdown.js"></script>
+</head>
+<body>
+<!-- Top Navigation -->
+    <nav class="navigation">
+        <div class="nav-button" onclick="toggleStatus()"></div>
+        <ul>
+            <li><a href="#">Home</a></li>
+
+            <!-- Vanilla-JS Dropdown Menu, made by myself -->
+            
+                <div class="dropdown">
+                <li><a href="#" onclick="toggleMenu()">Frameworks</a></li>
+                <div class="dropdown-content">
+                    <li class="listItem"><a href="#">React</a></li>
+                    <li class="listItem"><a href="#">Framework 2</a></li>
+                </div>
+            </div>
+            
+        </ul>
+    </nav>
+
+<!-- Sidebar Navigation from Tutorial Video -->    
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Framework</a></li>
+        </ul>
+    </aside>
+
+</body>
+</html>
