@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
     <title>React</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="react-dropdown.js"></script>
-</head>
-<body>
-<!-- Top Navigation -->
+  </head>
+  <body>
+    <!-- Top Navigation -->
     <nav class="navigation">
-        <div class="nav-button" onclick="toggleStatus()"></div>
-        <ul>
-            <li><a href="../vanillajs/index.html">Home</a></li>
+      <div class="nav-button" onclick="toggleStatus()"></div>
+      <ul>
+        <li><a href="../vanillajs/index.html">Home</a></li>
 
-            <!-- Vanilla-JS Dropdown Menu, made by myself -->
-            
-                <div class="dropdown">
-                <li><a href="#" onclick="toggleMenu()">Frameworks</a></li>
-                <div class="dropdown-content">
-                    <li class="listItem"><a href="#">React</a></li>
-                    <li class="listItem"><a href="#">Framework 2</a></li>
-                </div>
-            </div>
-            
-        </ul>
+        <!-- Vanilla-JS Dropdown Menu, made by myself -->
+
+        <!-- We will put our React component inside this div. -->
+
+        <li>
+          <div class="react-dropdown"></div>
+        </li>
+      </ul>
     </nav>
 
-<!-- Sidebar Navigation from Tutorial Video -->    
+    <!-- Sidebar Navigation from Tutorial Video -->
     <aside class="sidebar">
-        <ul>
-            <li><a href="../vanillajs/index.html">Home</a></li>
-            <li><a href="#">React</a></li>
-            <li><a href="#">Framework</a></li>
-        </ul>
+      <ul>
+        <li><a href="../vanillajs/index.html">Home</a></li>
+        <li><a href="#">React</a></li>
+        <li><a href="#">Framework</a></li>
+      </ul>
     </aside>
 
-</body>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Load our React component. -->
+    <script type="text/babel" src="react-dropdown.js"></script>
+
+    <script type="text/babel">
+      ReactDOM.render(
+        <ReactDropdown />,
+        document.querySelector(".react-dropdown")
+      );
+    </script>
+  </body>
 </html>
