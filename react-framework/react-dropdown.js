@@ -13,9 +13,7 @@ class ReactDropdown extends React.Component {
     return (
       <div className="dropdown">
         <li>
-          <a href="#" onClick={toggleMenu()}>
-            Frameworks
-          </a>
+          <a href="#">Frameworks</a>
         </li>
         <div className="dropdown-content">
           <li className="listItem">
