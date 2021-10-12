@@ -3,7 +3,6 @@
   <head>
     <title>React</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="react-dropdown.js"></script>
   </head>
   <body>
     <!-- Top Navigation -->
@@ -17,7 +16,7 @@
         <!-- We will put our React component inside this div. -->
 
         <li>
-          <div class="react-dropdown"></div>
+          <div id="react-dropdown" onclick="toggleMenu()"></div>
         </li>
       </ul>
     </nav>
@@ -48,10 +47,9 @@
     <script type="text/babel" src="react-dropdown.js"></script>
 
     <script type="text/babel">
-      ReactDOM.render(
-        <ReactDropdown />,
-        document.querySelector(".react-dropdown")
-      );
+      const dropdownElement = document.getElementById("react-dropdown");
+
+      ReactDOM.render(<ReactDropdown />, dropdownElement);
     </script>
   </body>
 </html>
