@@ -103,10 +103,3 @@ let clickCheck = function() {
 */
 
 /** ------------------------------------------------------------------------------------------------------------------ */
-
-/** jest test function */
-
-function sum(a, b) {
-  return a + b;
-}
-module.exports = sum;
