@@ -3,8 +3,6 @@
     <head>
     <title>JS API-Call</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="teleport.js"></script>
-    <script src="vanilla-dropdown.js"></script>
 </head>
 <body>
 <!-- Top Navigation -->
@@ -40,8 +38,11 @@
             <label for="city">City Name:</label>
             <input type="text" id="city" name="cityname"><br><br>
         </div>
-        <button class="submit" type="submit" onclick="getBackground()">Search for city</button>
+        <button class="submit" type="submit" onclick="searchCity()">Search for city</button>
+        <div class="reponse-container">Response</div>
     </div>
 </div>
+<script src="teleport.js"></script>
+<script src="vanilla-dropdown.js"></script>
 </body>
 </html>
