@@ -3,7 +3,7 @@
     <head>
     <title>JS API-Call</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="api-call.js"></script>
+    <script src="teleport.js"></script>
     <script src="vanilla-dropdown.js"></script>
 </head>
 <body>
@@ -19,8 +19,7 @@
                 <li><a href="#" onclick="toggleMenu()">Frameworks</a></li>
                 <div class="dropdown-content">
                     <li class="listItem"><a href="../react-framework/index.html">React</a></li>
-                    <li class="listItem"><a href="#">API-Call</a></li>
-                    <li class="listItem"><a href="../teleport-api/index.html">Teleport-API</a></li>
+                    <li class="listItem"><a href="../api-call/index.html">API-Call</a></li>
                 </div>
             </div>
         
@@ -36,8 +35,12 @@
         </ul>
     </aside>
 
-    <div class="button-container">
-        <button class="imgBtn" onclick="getBackground()">Change Background</button>
+    <div class="mid-container">
+        <div class="form-container">
+            <label for="city">City Name:</label>
+            <input type="text" id="city" name="cityname"><br><br>
+        </div>
+        <button class="submit" type="submit" onclick="getBackground()">Search for city</button>
     </div>
 </div>
 </body>

@@ -14,6 +14,9 @@ class ReactDropdown extends React.Component {
           <li className="listItem">
             <a href="../api-call/index.html">API-Call</a>
           </li>
+          <li className="listItem">
+            <a href="../teleport-api/index.html">Teleport-API</a>
+          </li>
         </div>
       </div>
     );
