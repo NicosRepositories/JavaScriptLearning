@@ -132,8 +132,8 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 300px; /* width of button */
-  height: 150px; /* height of button */
+  width: 400px;
+  height: 400px;
 
   text-transform: uppercase;
   text-decoration: none;
@@ -143,9 +143,23 @@ body {
 
   border: none;
   outline: none;
-  color: #fff;
-  background: #111;
+  color: black;
+  background: rgba(102, 100, 100, 0.9);
   cursor: pointer;
   z-index: 0;
   border-radius: 10px;
+}
+
+.form-container {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+.response-container {
+  margin-left: 15px;
+}
+
+.titleLbl {
+  margin-bottom: 25px;
 }
