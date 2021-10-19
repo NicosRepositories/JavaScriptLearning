@@ -4,13 +4,14 @@
   "description": "This is the Learning Repository for Javascript",
   "main": "index.js",
   "dependencies": {
-    "jest": "^27.2.5"
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
-    "cypress": "^8.6.0"
+    "cypress": "^8.6.0",
+    "jest": "^27.3.1"
   },
   "scripts": {
-    "test": "./node_modules/.bin/cypress",
+    "test": "node node_modules/jest/bin/jest.js -i teleport-api/teleport.spec.js",
     "cy:open": "cypress open"
   },
   "repository": {
