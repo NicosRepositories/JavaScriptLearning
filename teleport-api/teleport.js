@@ -46,9 +46,34 @@ let getCityInformation = function (geoNameID) {
   request.addEventListener("load", function (event) {
     if (request.status >= 200 && request.status < 300) {
       console.log(JSON.parse(request.responseText));
+      let cityInformation = JSON.parse(request.responseText);
+      showCityInformation(cityInformation);
     } else {
       console.warn(request.statusText, request.responseText);
     }
   });
   request.send();
+};
+
+/** extract relevant information and assign it to the DOM */
+
+let showCityInformation = function (cityInformation) {
+  /** get the elements by ID */
+  let getNameLabel = document.getElementById("fullName");
+  let getPopulationLabel = document.getElementById("population");
+  let getTimezoneLabel = document.getElementById("timezone");
+  let getGeonameLabel = document.getElementById("geonameid");
+
+  /** get the values from the response */
+
+  let fullName = cityInformation["full_name"];
+  let population = cityInformation["population"];
+  let timezone = cityInformation["_links"]["city:timezone"]["name"];
+  let geoname = cityInformation["geoname_id"];
+
+  /** assign the values to the DOM */
+  getNameLabel.innerHTML = fullName;
+  getPopulationLabel.innerHTML = population;
+  getTimezoneLabel.innerHTML = timezone;
+  getGeonameLabel.innerHTML = geoname;
 };
